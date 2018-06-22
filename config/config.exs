@@ -2,6 +2,19 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :bug, ecto_repos: [Bug.Repo]
+
+config :bug, Bug.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  username: "homestead",
+  password: "secret",
+  database: "mysql_bug",
+  hostname: "127.0.0.1",
+  port: 33060,
+  pool_size: 10,
+  migration_primary_key: [id: :uuid, type: :binary_id],
+  pool: Ecto.Adapters.SQL.Sandbox
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,

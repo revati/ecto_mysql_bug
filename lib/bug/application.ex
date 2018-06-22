@@ -8,6 +8,7 @@ defmodule Bug.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      {Bug.Repo, []}
       # Starts a worker by calling: Bug.Worker.start_link(arg)
       # {Bug.Worker, arg},
     ]
