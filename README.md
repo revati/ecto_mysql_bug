@@ -1,8 +1,6 @@
 # Ecto/MySQL/Binary id bug
 
-- clone
-- update mysql connection params in `config/config.exs`
-- `mix test`
+as sugested by https://elixirforum.com/t/odd-binary-id-mismatch/14719/11 created this seperate project for this bug to be isolated and easier to replicate
 
 ## Bug description
 
@@ -11,6 +9,19 @@ After inserting row in mysql table it seems to have different id in mysql table,
 Problems:
 - why id is changed while inserting in mysql table, and why it isnt changed for struct returned from `Repo.insert!`
 - why i can retrieve the same row with 2 different ids?
+
+## Beginings 
+
+- https://elixirforum.com/t/odd-binary-id-mismatch/14719/11
+- https://github.com/elixir-ecto/ecto/issues/2602
+
+## Usage 
+
+- clone
+- update mysql connection params in `config/config.exs`
+- `mix test`
+
+## Error inconsistencies
 
 Most of the time test fails with
 
