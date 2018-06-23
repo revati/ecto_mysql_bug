@@ -1,6 +1,6 @@
 # Ecto/MySQL/Binary id bug
 
-as sugested by https://elixirforum.com/t/odd-binary-id-mismatch/14719/11 created this seperate project for this bug to be isolated and easier to replicate
+as sugested by https://elixirforum.com/t/odd-binary-id-mismatch/14719/11 created this seperate project for this bug to be isolated and easier to replicate.
 
 ## Bug description
 
@@ -19,7 +19,31 @@ Problems:
 
 - clone
 - update mysql connection params in `config/config.exs`
+- `mix ecto.create`
+- `mix ecto.migrate`
 - `mix test`
+
+## Actual Environment to replicate the problem
+
+**Elixir version (elixir -v):**
+Erlang/OTP 21 [erts-10.0] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [hipe]
+
+Elixir 1.6.6 (compiled with OTP 20)
+
+**Database and version (PostgreSQL 9.4, MongoDB 3.2, etc.):**
+MySQL 5.7.22 and 8.0.11
+
+**Ecto version (mix deps):**
+ecto 2.2.10 (Hex package) (mix)
+locked at 2.2.10 (ecto) e7366dc8
+
+**Database adapter and version (mix deps):**
+mariaex 0.8.4 (Hex package) (mix)
+locked at 0.8.4 (mariaex) 5dd42a60
+
+**Operating system:**
+Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-101-generic x86_64)
+Codename: xenial
 
 ## Error inconsistencies
 
