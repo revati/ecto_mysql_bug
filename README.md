@@ -2,13 +2,6 @@
 
 as sugested by https://elixirforum.com/t/odd-binary-id-mismatch/14719/11 created this seperate project for this bug to be isolated and easier to replicate.
 
-| elixir environment     | mysql environment      | can reproduce bug |
-|------------------------|------------------------|-------------------|
-| Mac OS 10.13.5 (17F77) | Mac OS 10.13.5 (17F77) | No                |
-| Mac OS 10.13.5 (17F77) | Ubuntu 16.04.4 LTS     | Yes               |
-| Ubuntu 16.04.4 LTS     | Ubuntu 16.04.4 LTS     | Yes               |
-
-
 ## Bug description
 
 After inserting row in mysql table it seems to have different id in mysql table, but i can receive inserted row by both ids.
@@ -31,6 +24,12 @@ Problems:
 - `mix test`
 
 ## Actual Environment to replicate the problem
+
+| elixir environment     | mysql environment      | can reproduce bug |
+|------------------------|------------------------|-------------------|
+| Mac OS 10.13.5 (17F77) | Mac OS 10.13.5 (17F77) | No                |
+| Mac OS 10.13.5 (17F77) | Ubuntu 16.04.4 LTS     | Yes               |
+| Ubuntu 16.04.4 LTS     | Ubuntu 16.04.4 LTS     | Yes               |
 
 **Elixir version (elixir -v):**
 
